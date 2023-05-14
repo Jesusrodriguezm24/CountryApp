@@ -1,8 +1,8 @@
-
 import { useEffect, useState } from 'react'
-import './App.css'
 import { getAllCountries } from './services/getAllCountries'
 import CountryCard from './components/CountryCard/CountryCard';
+import Footer from './components/Footer/Footer';
+import './App.css'
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -30,17 +30,19 @@ function App() {
 
 
   return (
-    <>
+    <section className='containe_app'>
       <h1>Countries Searcher</h1>
       <form className='form' onSubmit={handleSubmit}>
         <div>
           <label htmlFor="countryMatchId">Search by name: </label>
           <input type="text" name="country_match" id='countryMatchId'></input>
         </div>
-        <button type='submit'>Search</button>
+        <button className='btn_submit' type='submit'>
+          <i className="fa-solid fa-magnifying-glass"></i>
+          </button>
       </form>
 
-      <p>{filteredCountries.length} Results</p>
+      <p className='p_result'>{filteredCountries.length} Results</p>
 
       <section className='countries_container'>
         {filteredCountries.map(country => 
@@ -48,7 +50,8 @@ function App() {
                             country={country}/>
                            )}
       </section>
-    </>
+      <Footer/> 
+    </section>
   )
 }
 export default App

@@ -1,8 +1,50 @@
+.containe_app h1{
+    text-align: center;
+    font-family: cursive ;
+}
 .countries_container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(256px,1fr));
     gap: 1rem;
 }
 .form{
-    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-family: cursive;
+    font-size: 18px;
+    font-weight: 400;
+
+    margin-bottom: 1rem;
+}
+#countryMatchId{
+    border-style: none;
+    font-family: cursive;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+
+    color: blue;
+    background-color: aliceblue;
+}
+.btn_submit{
+    width: 30px;
+    height: 30px;
+
+    border-radius: 100%;
+    margin-top: 5px;
+    
+    color: blue;
+}
+.btn_submit i{
+    font-size: 16px;
+    font-weight: bold;
+}
+.p_result{
+    text-align: center;
+    font-family: cursive;
+
+    color: rgb(46, 38, 161);
 }
